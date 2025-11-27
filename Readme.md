@@ -8,13 +8,12 @@ This project demonstrates end-to-end machine learning deployment on microcontrol
 
 **Key Achievements:**
 -  **99.25% hardware accuracy** (validated on Arduino)
-- 📦 **7.5 KB model size** (INT8 quantized)
-- ⚡ **Real-time inference** on Cortex-M4F MCU
-- 🚀 **49% improvement** over baseline (50% → 99%)
+-  **7.5 KB model size** (INT8 quantized)
+-  **Real-time inference** on Cortex-M4F MCU
 
-## 🏗️ Architecture
+## Architecture
 
-### Model Design Philosophy
+### Model Design
 
 Completely redesigned from baseline with focus on:
 - Temporal feature extraction via strided 1D convolutions
