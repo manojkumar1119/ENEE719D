@@ -119,7 +119,7 @@ Testing via `Python_input_output.py`:
 
 **Validated accuracy: 99.254%**
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 
@@ -127,43 +127,17 @@ Testing via `Python_input_output.py`:
 pip install tensorflow numpy
 ```
 
-### Training
-
-```python
-# Train model
-python train_model.py
-
-# Convert to TFLite
-python convert_to_tflite.py
-```
-
-### Deployment
-
-```bash
-# Generate C array
-xxd -i model.tflite > model.cpp
-
-# Flash to Arduino (using Arduino IDE)
-# Upload Command_word.ino
-
-# Test hardware
-python Python_input_output.py
-```
-
 ## Repository Structure
 
 ```
 .
-├── train_model.py              # Model training script
-├── convert_to_tflite.py        # TFLite conversion
 ├── model.tflite                # Quantized model
 ├── model.cpp                   # Model C array
 ├── model.h                     # Model header
 ├── Command_word.ino            # Arduino inference code
 ├── output_handler.h            # Output utilities
-├── Python_input_output.py      # Hardware testing script
 ├── report.pdf                  # Detailed technical report
-└── README.md                   # This file
+
 ```
 
 ## Learning Outcomes
