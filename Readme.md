@@ -150,7 +150,7 @@ xxd -i model.tflite > model.cpp
 python Python_input_output.py
 ```
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 .
@@ -166,38 +166,7 @@ python Python_input_output.py
 └── README.md                   # This file
 ```
 
-## 🔬 Key Innovations
-
-1. **Strided Convolutions for Compression**
-   - Reduces 16,000 samples to hundreds without information loss
-   - Better than pooling for temporal patterns
-
-2. **Global Max Pooling Replacement**
-   - Eliminates expensive dense layers
-   - 90% reduction in parameters
-
-3. **Quantization-Optimized Architecture**
-   - ReLU6 bounds activations → better INT8 mapping
-   - BatchNorm → stable quantization calibration
-   - Post-quantization accuracy *increases*
-
-4. **Real-Time Validated**
-   - Not just simulation — actual hardware testing
-   - 99.25% accuracy proves correct deployment
-
-## 📈 Comparison with Baseline
-
-| Metric | Baseline | Optimized | Improvement |
-|--------|----------|-----------|-------------|
-| Accuracy | 50% | 99.25% | +49.25% |
-| Conv Layers | 2 | 6+ | +4 layers |
-| Normalization | ❌ | ✅ BatchNorm | Stability |
-| Activation | ReLU | ReLU6 | Quantization |
-| Pooling | MaxPool | Strided Conv | Feature preservation |
-| Dense Layer | Large | Minimal | -90% params |
-| Quantization | Poor | Excellent | +0.12% post-quant |
-
-## 🎓 Learning Outcomes
+## Learning Outcomes
 
 - Deep understanding of TinyML constraints and optimizations
 - Practical quantization-aware architecture design
@@ -205,18 +174,3 @@ python Python_input_output.py
 - Hardware validation and debugging techniques
 - Trade-offs between accuracy, size, and latency
 
-## 📝 License
-
-This project was completed as part of an embedded machine learning course assignment.
-
-## 🙏 Acknowledgments
-
-- Speech Commands dataset
-- TensorFlow Lite for Microcontrollers
-- Arduino community
-
----
-
-**Author:** [Your Name]  
-**Course:** [Course Name]  
-**Date:** [Submission Date]
