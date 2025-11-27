@@ -111,7 +111,6 @@ xxd -i model.tflite > model.cpp
 
 ### 5. Hardware Validation
 
-Testing via `Python_input_output.py`:
 1. Python sends audio features via serial
 2. Arduino runs TFLite Micro inference
 3. Arduino returns predicted label
