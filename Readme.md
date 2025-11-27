@@ -37,18 +37,7 @@ Dense(2) + Softmax
 Output: [P(zero), P(one)]
 ```
 
-**Key Design Choices:**
-
-| Component | Baseline | Optimized | Rationale |
-|-----------|----------|-----------|-----------|
-| Convolution Layers | 2 | 6+ | Deeper feature extraction |
-| Activation | ReLU | ReLU6 | Better quantization |
-| Normalization | None | BatchNorm | Training stability |
-| Pooling Strategy | Early MaxPool | Strided Conv | Preserves temporal patterns |
-| Dense Layer | Large | Tiny (after GlobalMaxPool) | 90% parameter reduction |
-| Regularization | None | Dropout | Generalization |
-
-## 📊 Results
+## Results
 
 ### Accuracy Comparison
 
@@ -65,7 +54,7 @@ Output: [P(zero), P(one)]
 - **Model compression:** ~80% reduction from baseline
 - **Hardware validation:** Matches quantized accuracy
 
-## 🔧 Technical Implementation
+## Technical Implementation
 
 ### 1. Data Preprocessing
 
